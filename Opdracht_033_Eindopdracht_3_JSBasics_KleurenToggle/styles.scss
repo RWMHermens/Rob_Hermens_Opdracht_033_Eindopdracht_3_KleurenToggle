@@ -1,0 +1,93 @@
+@mixin linkpadding {
+    padding: 15px;
+    border: 1px solid lightgrey;
+    cursor: pointer;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+}
+
+body {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.image {
+    width: 50px;
+    cursor: pointer;
+}
+
+.menu {
+    list-style: none;
+    width: 200px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+    position: absolute;
+    left: -200px;
+    transition: all 300ms ease-in-out;
+
+    &__home {
+        background-color: lightgrey;
+        @include linkpadding();
+    }
+    
+    &__red {
+        background-color: red;
+        @include linkpadding();
+    }
+
+    &__orange {
+        background-color: orange;
+        @include linkpadding();
+    }
+
+    &__purple {
+        background-color: rgb(197, 0, 197);
+        @include linkpadding();
+    }
+
+    &__green {
+        background-color: rgb(0, 175, 0);
+        @include linkpadding();
+    }
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.text {
+    font-size: 72px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+
+}
+
+.bgr-grey {
+    background-color: lightgrey;
+}
+.bgr-red {
+    background-color: red;
+}
+.bgr-orange {
+    background-color: orange;
+}
+.bgr-purple {
+    background-color: rgb(197, 0, 197);
+}
+.bgr-green {
+    background-color: rgb(0, 175, 0);
+}
